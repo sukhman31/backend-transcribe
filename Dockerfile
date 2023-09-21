@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y git
 RUN pip install --no-cache-dir --verbose -r requirements.txt
 RUN pip install git+https://github.com/m-bain/whisperx.git
 RUN apt-get -y update && apt-get -y upgrade && apt-get install -y --no-install-recommends ffmpeg
-
+RUN python manage.py runserver
 
 COPY . .
 
